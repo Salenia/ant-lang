@@ -1,7 +1,7 @@
 #![allow(dead_code)]
 extern crate common;
+use common::error::{PResult, ParserError};
 use common::Builder;
-
 mod token;
 mod token_type;
 
@@ -24,9 +24,9 @@ impl Lexer {
 }
 impl Builder for Lexer {
     type Input = String;
-    type Output = Result<Vec<Token>, String>;
+    type Output = PResult<Vec<Token>>;
 
-    fn build(input: String) -> Result<Vec<Token>, String> {
-        Err("".to_string())
+    fn build(&mut self, input: Self::Input) -> Self::Output {
+        Err(ParserError::Syntax("".to_string()))
     }
 }
