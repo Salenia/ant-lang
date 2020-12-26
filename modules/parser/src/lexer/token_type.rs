@@ -1,4 +1,5 @@
-use super::super::common::Converter;
+extern crate common;
+use common::Converter;
 
 mod condition;
 mod keyword;
