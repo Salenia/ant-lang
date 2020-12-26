@@ -1,2 +1,6 @@
+mod lexer;
+use lexer::TokenType;
 #[cfg(test)]
-mod tests {}
+mod tests {
+    use super::*;
+}
