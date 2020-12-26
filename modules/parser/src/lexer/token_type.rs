@@ -1,5 +1,4 @@
-mod convert;
-pub use convert::Convert;
+use super::super::common::Converter;
 
 mod condition;
 mod keyword;

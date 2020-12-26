@@ -1,3 +1,5 @@
+extern crate common;
+
 mod lexer;
 
 #[cfg(test)]

@@ -21,7 +21,7 @@ impl ConditionType {
     }
 }
 
-impl super::Convert<&str, Option<Self>> for ConditionType {
+impl super::Converter<&str, Option<Self>> for ConditionType {
     fn convert(input: &str) -> Option<Self> {
         match input {
             "==" => Some(Self::Equal),

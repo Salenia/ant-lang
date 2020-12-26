@@ -1,3 +1,3 @@
-pub trait Convert<TIn, TOut> {
+pub trait Converter<TIn, TOut> {
     fn convert(input: TIn) -> TOut;
 }
